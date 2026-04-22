@@ -437,7 +437,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('assets/hero/hero-main.jpg');
+    background-image: url('assets/hero-main.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -614,7 +614,7 @@ section {
 }
 
 .split-card.household::before {
-    background-image: url('assets/household/household-1.jpg');
+    background-image: url('assets/household-1.jpg');
 }
 
 .split-card.household::after {
@@ -627,7 +627,7 @@ section {
 }
 
 .split-card.elite::before {
-    background-image: url('assets/protection/protection-1.jpg');
+    background-image: url('assets/protection-1.jpg');
 }
 
 .split-card.elite::after {
@@ -710,7 +710,7 @@ section {
 .husbandry-image {
     width: 100%;
     aspect-ratio: 4/5;
-    background-image: url('assets/husbandry/husbandry-1.jpg');
+    background-image: url('assets/husbandry-1.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 2px;
@@ -962,7 +962,7 @@ section {
    SERVICES PAGE
    ============================================ */
 .services-page .page-hero::before {
-    background-image: url('assets/protection/protection-2.jpg');
+    background-image: url('assets/protection-2.jpg');
 }
 
 .jump-nav {
@@ -1229,7 +1229,7 @@ section {
    ABOUT PAGE
    ============================================ */
 .about-page .page-hero::before {
-    background-image: url('assets/yahima/yahima-main.jpg');
+    background-image: url('assets/yahima-main.jpg');
 }
 
 .origin {
@@ -1247,7 +1247,7 @@ section {
 .origin-image {
     width: 100%;
     aspect-ratio: 4/5;
-    background-image: url('assets/yahima/yahima-main.jpg');
+    background-image: url('assets/yahima-main.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 2px;
@@ -1377,7 +1377,7 @@ section {
    BOOK PAGE
    ============================================ */
 .book-page .page-hero::before {
-    background-image: url('assets/household/household-1.jpg');
+    background-image: url('assets/household-1.jpg');
 }
 
 .how-it-works {
@@ -1581,7 +1581,7 @@ section {
    CONTACT PAGE
    ============================================ */
 .contact-page .page-hero::before {
-    background-image: url('assets/household/household-1.jpg');
+    background-image: url('assets/household-1.jpg');
 }
 
 .contact-info {
