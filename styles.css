@@ -447,15 +447,25 @@ p {
   overflow: hidden;
   border-top: 1px solid rgba(243, 237, 225, 0.08);
   border-bottom: 1px solid rgba(243, 237, 225, 0.08);
+  position: relative;
 }
 
 .marquee-track {
   display: flex;
-  gap: 36px;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-group {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0 28px;
+  gap: 36px;
+  padding-right: 36px;
+  flex-shrink: 0;
 }
 
 .marquee-item {
@@ -465,6 +475,7 @@ p {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cream);
+  white-space: nowrap;
 }
 
 .marquee-dot {
@@ -473,6 +484,18 @@ p {
   background: var(--camel);
   border-radius: 50%;
   display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* ---------- Section variants ---------- */
@@ -745,8 +768,14 @@ p {
   will-change: transform;
 }
 
+/* Programs grid (homepage, static 3-col layout) */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
 .program-card {
-  flex: 0 0 calc(33.333% - 16px);
   background: var(--ivory);
   border: 1px solid var(--line-soft);
   border-radius: var(--r-md);
@@ -756,6 +785,10 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 320px;
+}
+
+.carousel-track .program-card {
+  flex: 0 0 calc(33.333% - 16px);
 }
 
 .program-card:hover {
@@ -1565,7 +1598,8 @@ p {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
-  .program-card { flex: 0 0 calc(50% - 12px); }
+  .programs-grid { grid-template-columns: repeat(2, 1fr); }
+  .carousel-track .program-card { flex: 0 0 calc(50% - 12px); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .det-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1598,12 +1632,13 @@ p {
   .values-grid,
   .svc-grid,
   .pair-grid,
-  .steps-grid {
+  .steps-grid,
+  .programs-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .program-card { flex: 0 0 100%; }
+  .carousel-track .program-card { flex: 0 0 100%; }
 
   .form-panel {
     padding: 32px 24px;
