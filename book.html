@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Consultation | Canem Arca Dog Training</title>
-    <meta name="description" content="Book your free dog training consultation with Canem Arca. Serving Leander, Austin, and Central Texas. We'll be in touch within 24 hours.">
+    <meta name="description" content="Book a free consultation with Canem Arca dog training. Tell us a bit about your dog and your goals, and we'll follow up within one business day.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="book-page">
+<body>
 
-    <!-- NAVIGATION -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="index.html" class="nav-brand">Canem Arca</a>
@@ -24,14 +23,11 @@
                 <li><a href="book.html" class="nav-cta">Book Consultation</a></li>
             </ul>
             <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- MOBILE MENU -->
     <div class="mobile-menu">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -44,34 +40,41 @@
 
     <!-- PAGE HERO -->
     <section class="hero page-hero">
+        <div class="hero-img">
+            <img src="assets/household-2.jpg" alt="Book a consultation with Canem Arca">
+        </div>
         <div class="hero-content">
-            <div class="hero-kicker">Book a Consultation</div>
-            <h1>Let's map out the best path for you and your dog</h1>
-            <p class="hero-subhead">Free initial consultations available. Tell us a little about your dog and we'll be in touch within 24 hours.</p>
+            <div class="hero-meta">
+                <span>Book</span>
+                <span class="hero-meta-sep"></span>
+                <span>Free Consultation</span>
+            </div>
+            <h1>Let's build your dog's <em>foundation.</em></h1>
+            <p class="hero-sub">Tell us a bit about your dog and what you want to accomplish. We'll follow up to map out the right next step.</p>
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works">
-        <div class="container">
+    <!-- STEPS -->
+    <section class="steps">
+        <div class="steps-inner">
             <div class="steps-grid">
 
                 <div class="step">
-                    <div class="step-number">01</div>
-                    <h4>Tell us about your dog</h4>
-                    <p>Fill out the quick form below so we can understand your situation.</p>
+                    <span class="step-num">01</span>
+                    <h4>Tell us <em>about your dog.</em></h4>
+                    <p>Breed, age, what you love, what you're working through. A quick form to get us started.</p>
                 </div>
 
                 <div class="step">
-                    <div class="step-number">02</div>
-                    <h4>We reach out</h4>
-                    <p>Within 24 hours, we'll contact you to learn more and schedule your free consultation.</p>
+                    <span class="step-num">02</span>
+                    <h4>We'll <em>reach out.</em></h4>
+                    <p>Within one business day. We may ask a few follow-up questions or share our intake form for a deeper look.</p>
                 </div>
 
                 <div class="step">
-                    <div class="step-number">03</div>
-                    <h4>Build your plan</h4>
-                    <p>We'll map out the right program for you and your dog.</p>
+                    <span class="step-num">03</span>
+                    <h4>Build your <em>plan.</em></h4>
+                    <p>We recommend the right path, whether that's private sessions, a board &amp; train, or something specialized.</p>
                 </div>
 
             </div>
@@ -79,153 +82,160 @@
     </section>
 
     <!-- FORM SECTION -->
-    <section class="form-section">
-        <div class="container">
-            <div class="form-grid">
+    <section class="book-form">
+        <div class="book-form-inner">
 
-                <!-- Form -->
-                <div class="form-wrapper">
-                    <h2>Request a consultation</h2>
-                    <p class="form-intro">Share a few quick details and we'll follow up within 24 hours.</p>
+            <div class="form-box">
+                <span class="section-num">04 &mdash; Request Consultation</span>
+                <h2>Start the <em>conversation.</em></h2>
+                <p class="intro">The more you share, the better we can prepare for our first conversation. All fields marked with a dot are required.</p>
 
-                    <!-- IMPORTANT: Replace YOUR_FORMSPREE_ENDPOINT_HERE with the new Formspree endpoint for Canem Arca -->
-                    <form id="consultation-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE" method="POST" id="consultation-form">
 
-                        <!-- Hidden fields for better submission context -->
-                        <input type="hidden" name="_subject" value="New Canem Arca Consultation Request">
-                        <input type="hidden" name="_next" value="thank-you.html">
+                    <div class="form-field">
+                        <label for="name">Your Name <span class="req">&bull;</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="name">Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
+                    <div class="form-field">
+                        <label for="email">Email <span class="req">&bull;</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
+                    <div class="form-field">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="phone">Phone <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
+                    <div class="form-field">
+                        <label for="dog-name">Dog's Name</label>
+                        <input type="text" id="dog-name" name="dog-name">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="dog-info">Dog's age and breed</label>
-                            <input type="text" id="dog-info" name="dog-info" placeholder="Ex: 2 years, GSD/Malinois mix">
-                        </div>
+                    <div class="form-field">
+                        <label for="dog-breed">Breed &amp; Age</label>
+                        <input type="text" id="dog-breed" name="dog-breed" placeholder="e.g. 2-year-old German Shepherd">
+                    </div>
 
-                        <div class="form-group">
-                            <label for="interest">What are you looking for? <span class="required">*</span></label>
-                            <select id="interest" name="interest" required>
-                                <option value="">Select one...</option>
-                                <option value="Pet obedience and behavior">Pet obedience and behavior</option>
-                                <option value="Puppy foundations">Puppy foundations</option>
-                                <option value="Personal protection or sport work">Personal protection or sport work</option>
-                                <option value="Cooperative husbandry and vet prep">Cooperative husbandry and vet prep</option>
-                                <option value="Board and train">Board and train</option>
-                                <option value="Medical boarding">Medical boarding</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
+                    <div class="form-field">
+                        <label for="interest">I'm Interested In <span class="req">&bull;</span></label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select a program</option>
+                            <option value="household">Household Harmony (Pet Training)</option>
+                            <option value="puppy">Puppy Foundations</option>
+                            <option value="behavior">Behavior Modification</option>
+                            <option value="husbandry">Cooperative Husbandry</option>
+                            <option value="ppd">Personal Protection (PPD)</option>
+                            <option value="sport">Protection Sport (APPDA/PSA/French Ring/IGP)</option>
+                            <option value="detection">Specialized Detection</option>
+                            <option value="service">Service Dog Maintenance</option>
+                            <option value="medical">Medical Boarding</option>
+                            <option value="unsure">Not Sure Yet</option>
+                        </select>
+                    </div>
 
-                        <div class="form-group">
-                            <label for="message">Tell us briefly what's going on</label>
-                            <textarea id="message" name="message" rows="5" placeholder="A few sentences about your dog and what you're hoping to work on."></textarea>
-                        </div>
+                    <div class="form-field">
+                        <label for="goals">What are you hoping to work on?</label>
+                        <textarea id="goals" name="goals" placeholder="Share what's on your mind..."></textarea>
+                    </div>
 
-                        <button type="submit" class="form-submit">Send Request</button>
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <input type="hidden" name="_subject" value="New Consultation Request - Canem Arca">
 
-                    </form>
+                    <button type="submit" class="form-submit" id="submitBtn">Request Consultation</button>
+                </form>
+            </div>
+
+            <aside class="form-side">
+                <span class="section-num" style="color: rgba(244,239,229,0.6);">What to expect</span>
+                <h4>After you submit.</h4>
+
+                <div class="side-item">
+                    <span class="label">Response Time</span>
+                    <span class="value">Within one business day, typically faster.</span>
                 </div>
 
-                <!-- Sidebar -->
-                <aside class="form-sidebar">
-                    <h4>What to know</h4>
+                <div class="side-item">
+                    <span class="label">Cost</span>
+                    <span class="value">Initial consultations are free.</span>
+                </div>
 
-                    <div class="sidebar-item">
-                        <div class="label">Credentials</div>
-                        <div class="value">Vet Tech Owned &amp; Operated</div>
-                    </div>
+                <div class="side-item">
+                    <span class="label">Next Step</span>
+                    <span class="value">If your situation is a fit, we'll share our detailed intake form.</span>
+                </div>
 
-                    <div class="sidebar-item">
-                        <div class="label">Location</div>
-                        <div class="value">Leander, Texas</div>
-                    </div>
+                <div class="side-item">
+                    <span class="label">Prefer to call?</span>
+                    <span class="value">678&middot;263&middot;6895</span>
+                </div>
+            </aside>
 
-                    <div class="sidebar-item">
-                        <div class="label">Phone</div>
-                        <div class="value">678-263-6895</div>
-                    </div>
-
-                    <div class="sidebar-item">
-                        <div class="label">Instagram</div>
-                        <div class="value">@canem_arca_kennels</div>
-                    </div>
-
-                    <div class="sidebar-item">
-                        <div class="label">Response Time</div>
-                        <div class="value">Within 24 hours</div>
-                    </div>
-
-                </aside>
-
-            </div>
         </div>
     </section>
 
-    <!-- REASSURANCE -->
-    <section class="reassurance">
-        <div class="container">
-            <div class="reassurance-inner">
-                <span class="kicker">What Happens Next</span>
-                <h3>No pressure. Just a real conversation.</h3>
-                <p>We'll reach out within 24 hours to schedule your free consultation. For qualified programs, we'll send a detailed intake form to learn more about your dog before we meet. No pushy sales, no high-pressure pitch, just a real conversation about your dog and how we can help.</p>
-            </div>
+    <!-- REASSURE -->
+    <section class="reassure">
+        <div class="reassure-inner">
+            <span class="section-num">05 &mdash; A Promise</span>
+            <h3>No pressure. <em>No gimmicks.</em></h3>
+            <p>If we're not the right fit for your dog, we'll tell you and do our best to point you toward someone who is. The goal is a better life for the dog in front of us, not a sales quota.</p>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+        <div class="footer-wordmark">
+            <span class="mark">Canem <em>Arca</em></span>
+            <span class="tag">We don't just train dogs. We train relationships.</span>
+        </div>
 
-                <div class="footer-brand">
-                    <div class="brand-mark">Canem Arca</div>
-                    <p>We don't just train dogs. We train relationships. Specialized training for the family pet and the working dog, based in Leander, Texas.</p>
-                </div>
+        <div class="footer-grid">
 
-                <div>
-                    <h5>Contact</h5>
-                    <ul>
-                        <li>Leander, Texas</li>
-                        <li>678-263-6895</li>
-                        <li>@canem_arca_kennels</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h5>Navigate</h5>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="book.html">Book Consultation</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
+            <div class="footer-col">
+                <h5>About</h5>
+                <p>Specialized training for the family pet and the working dog, based in Leander, Texas. Vet Tech owned and operated.</p>
             </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 Canem Arca &middot; Built by OTM Web Design</p>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61588463427591" target="_blank" rel="noopener" aria-label="Facebook">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <ul>
+                    <li>Leander, Texas</li>
+                    <li>678-263-6895</li>
+                    <li>@canem_arca_kennels</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="services.html#household">Household Harmony</a></li>
+                    <li><a href="services.html#elite">Protection &amp; Sport</a></li>
+                    <li><a href="services.html#husbandry">Cooperative Husbandry</a></li>
+                    <li><a href="services.html#detection">Specialized Detection</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="book.html">Book</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Canem Arca &mdash; Built by OTM Web Design</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61588463427591" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </footer>
