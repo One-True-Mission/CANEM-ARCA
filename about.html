@@ -1,201 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Canem Arca Dog Training</title>
-    <meta name="description" content="Meet the heart behind Canem Arca. Vet Tech owned dog training in Leander, TX. Our philosophy, our mission, and why we bridge the gap between 'wild animal' and 'best friend.'">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Canem Arca Dog Training</title>
+  <meta name="description" content="Meet the heart behind Canem Arca. Vet Tech owned dog training in Leander, TX. Our philosophy, our mission, and why we bridge the gap between 'wild animal' and 'best friend.'" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-page="about">
 
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-brand">Canem Arca</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="book.html" class="nav-cta">Book Consultation</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Canem Arca</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+        <li><a href="services.html" class="nav-link" data-nav="services">Services</a></li>
+        <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="book.html" class="nav-cta" data-nav="book">Book Consultation</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="book.html" class="cta-mobile">Book Consultation</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="hero page-hero">
+    <div class="hero-image" style="background-image: url('assets/yahima-main.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">About &middot; Meet the Heart Behind the Harness</span>
+      <h1 class="display">We bridge the gap between "wild animal" and "best friend."</h1>
+      <p class="hero-sub">Vet Tech owned. Built on experience earned in exam rooms, kennels, and trial fields.</p>
+    </div>
+  </section>
+
+  <!-- ORIGIN STORY -->
+  <section class="section">
+    <div class="container">
+      <div class="about-intro">
+        <div class="about-intro-img">
+          <img src="assets/yahima-main.jpg" alt="Canem Arca founder" />
         </div>
-    </nav>
+        <div class="about-intro-text">
+          <span class="eyebrow">Our Story</span>
+          <h2 class="display">The heart behind the harness.</h2>
+          <span class="divider"></span>
+          <p>For years, we served the pet community as dedicated Veterinary Technicians. We saw too many wonderful dogs struggle in exams because they were overwhelmed, fearful, or reactive. That experience is what drove us to create Canem Arca.</p>
+          <p>We bridge the gap between "wild animal" and "best friend," so your dog is a pleasure to live with and a breeze to care for. From the family pet who can't stop pulling on the leash to the high-drive working prospect destined for sport trials, every dog we work with gets the foundation they need.</p>
+          <p>We want your dog to be a balanced, confident, joy-filled citizen, and we want a life where everyone is happy. You and your best friend.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="mobile-menu">
+  <!-- MISSION QUOTE -->
+  <section class="mission-quote">
+    <blockquote>
+      "We don't just train dogs. We train relationships."
+    </blockquote>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section">
+    <div class="container">
+      <div class="svc-header">
+        <span class="eyebrow">Our Philosophy</span>
+        <h2 class="display">What guides every session.</h2>
+        <p class="lede" style="margin: 0 auto;">Three principles that stay constant, whether we're teaching a puppy to sit or building a protection dog for trial.</p>
+      </div>
+
+      <div class="values-grid">
+
+        <div class="value-card">
+          <div class="value-icon">01</div>
+          <h4>Rooted in Medicine</h4>
+          <p>Our Vet Tech background shapes everything. We understand how stress, health, and physiology interact with behavior, so we train with the whole dog in mind.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">02</div>
+          <h4>Clear Over Clever</h4>
+          <p>Dogs don't need tricks or gimmicks. They need consistency and communication they can trust. We teach you both the "what" and the "why."</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">03</div>
+          <h4>Built to Last</h4>
+          <p>A well-trained dog is the result of systems that hold up outside our facility. Our goal is a dog that performs for you, not just for us.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NAME BLOCK -->
+  <section class="section tinted">
+    <div class="container">
+      <div class="name-block">
+        <span class="eyebrow">The Name</span>
+        <div class="wordmark">Canem Arca</div>
+        <p>From the Latin: <em>canem</em> (dog) and <em>arca</em> (ark, stronghold, sanctuary). A refuge for dogs and the families who love them. A place where the work is serious, the care is deep, and every dog is met where they are.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="cta-strip-inner">
+      <span class="eyebrow light">Get Started</span>
+      <h2 class="display">Ready to start the conversation?</h2>
+      <p>Free initial consultations available. We'll listen first, then build a plan.</p>
+      <a href="book.html" class="btn btn-light">Book Your Consultation <span class="arrow">&rarr;</span></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">Canem Arca</div>
+        <p>Specialized training for the family pet and the working dog, based in Leander, Texas. Vet Tech owned and operated.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="book.html">Book Consultation</a></li>
+          <li>Leander, Texas</li>
+          <li>678-263-6895</li>
+          <li>@canem_arca_kennels</li>
         </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#household">Household Harmony</a></li>
+          <li><a href="services.html#elite">Protection &amp; Sport</a></li>
+          <li><a href="services.html#husbandry">Cooperative Husbandry</a></li>
+          <li><a href="services.html#detection">Detection Work</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- PAGE HERO -->
-    <section class="hero page-hero">
-        <div class="hero-img">
-            <img src="assets/yahima-main.jpg" alt="Canem Arca owner and dog trainer">
-        </div>
-        <div class="hero-content">
-            <div class="hero-meta">
-                <span>About</span>
-                <span class="hero-meta-sep"></span>
-                <span>Meet the Heart Behind the Harness</span>
-            </div>
-            <h1>We bridge the gap between <em>"wild animal"</em> and <em>"best friend."</em></h1>
-            <p class="hero-sub">Vet Tech owned. Built on experience earned in exam rooms, kennels, and trial fields.</p>
-        </div>
-    </section>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Canem Arca. Built by OTM Web Design.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61588463427591" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- ORIGIN STORY -->
-    <section class="about-origin">
-        <div class="about-origin-grid">
-
-            <div class="about-origin-img">
-                <img src="assets/yahima-secondary.jpg" alt="Yahima and dog">
-            </div>
-
-            <div class="about-origin-text">
-                <span class="section-num">01 &mdash; Our Story</span>
-                <h2>The heart behind <em>the harness.</em></h2>
-                <p>For years, we served the pet community as dedicated Veterinary Technicians. We saw too many wonderful dogs struggle in exams because they were overwhelmed, fearful, or reactive. That experience is what drove us to create Canem Arca.</p>
-                <p>We bridge the gap between "wild animal" and "best friend," so your dog is a pleasure to live with and a breeze to care for. From the family pet who can't stop pulling on the leash to the high-drive working prospect destined for sport trials, every dog we work with gets the foundation they need.</p>
-                <p>We want your dog to be a balanced, confident, joy-filled citizen, and we want a life where everyone is happy, you and your best friend.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- MISSION BAND -->
-    <section class="mission">
-        <div class="mission-inner">
-            <blockquote>
-                We don't just train dogs. We train relationships.
-            </blockquote>
-        </div>
-    </section>
-
-    <!-- VALUES -->
-    <section class="values">
-        <div class="values-header">
-            <span class="section-num">02 &mdash; Our Philosophy</span>
-            <h2>What guides <em>every session.</em></h2>
-        </div>
-
-        <div class="values-grid">
-
-            <div class="value">
-                <span class="value-num">/ 01</span>
-                <h4>Rooted in <em>Medicine.</em></h4>
-                <p>Our Vet Tech background shapes everything. We understand how stress, health, and physiology interact with behavior, so we train with the whole dog in mind.</p>
-            </div>
-
-            <div class="value">
-                <span class="value-num">/ 02</span>
-                <h4>Clear Over <em>Clever.</em></h4>
-                <p>Dogs don't need tricks or gimmicks. They need consistency and communication they can trust. We teach you both the "what" and the "why."</p>
-            </div>
-
-            <div class="value">
-                <span class="value-num">/ 03</span>
-                <h4>Built to <em>Last.</em></h4>
-                <p>A well-trained dog is the result of systems that hold up outside our facility. Our goal is a dog that performs for you, not just for us.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- NAME / WORDMARK -->
-    <section class="name-section">
-        <div class="name-inner">
-            <span class="section-num">03 &mdash; The Name</span>
-            <span class="wordmark">Canem <em>Arca.</em></span>
-            <p>From the Latin, <em>canem</em> (dog) and <em>arca</em> (ark, stronghold, sanctuary). A refuge for dogs and the families who love them. A place where the work is serious, the care is deep, and every dog is met where they are.</p>
-        </div>
-    </section>
-
-    <!-- WHO WE SERVE -->
-    <section class="serve">
-        <div class="serve-inner">
-            <span class="section-num">04 &mdash; Who We Work With</span>
-            <h2>From the family pet to <em>the specialized worker.</em></h2>
-            <p>We work with pet owners who want a dog that fits into daily life, and with handlers who demand precision from sport prospects, personal protection dogs, and specialized detection candidates. The standard stays the same either way. The dog in front of us is the one we train for.</p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta cta-forest">
-        <div class="cta-inner">
-            <h2>Ready to start <em>the conversation?</em></h2>
-            <p>Free initial consultations available. We'll listen first, then build a plan.</p>
-            <a href="book.html" class="btn btn-ghost">Book Your Consultation <span class="arrow"></span></a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-wordmark">
-            <span class="mark">Canem <em>Arca</em></span>
-            <span class="tag">We don't just train dogs. We train relationships.</span>
-        </div>
-
-        <div class="footer-grid">
-
-            <div class="footer-col">
-                <h5>About</h5>
-                <p>Specialized training for the family pet and the working dog, based in Leander, Texas. Vet Tech owned and operated.</p>
-            </div>
-
-            <div class="footer-col">
-                <h5>Contact</h5>
-                <ul>
-                    <li>Leander, Texas</li>
-                    <li>678-263-6895</li>
-                    <li>@canem_arca_kennels</li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Services</h5>
-                <ul>
-                    <li><a href="services.html#household">Household Harmony</a></li>
-                    <li><a href="services.html#elite">Protection &amp; Sport</a></li>
-                    <li><a href="services.html#husbandry">Cooperative Husbandry</a></li>
-                    <li><a href="services.html#detection">Specialized Detection</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Navigate</h5>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="book.html">Book</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Canem Arca &mdash; Built by OTM Web Design</p>
-            <div class="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=61588463427591" target="_blank" rel="noopener" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
