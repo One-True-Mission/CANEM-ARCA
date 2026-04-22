@@ -1,313 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Canem Arca Dog Training</title>
-    <meta name="description" content="Dog training services in Leander, TX. Pet obedience, behavior modification, puppy foundations, cooperative husbandry, protection sport (APPDA, PSA, French Ring, IGP), detection work, and medical boarding.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Canem Arca Dog Training</title>
+  <meta name="description" content="Dog training services in Leander, TX. Pet obedience, behavior modification, puppy foundations, cooperative husbandry, protection sport (APPDA, PSA, French Ring, IGP), detection work, and medical boarding." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-page="services">
 
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-brand">Canem Arca</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li><a href="book.html" class="nav-cta">Book Consultation</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Canem Arca</a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+        <li><a href="services.html" class="nav-link" data-nav="services">Services</a></li>
+        <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+        <li><a href="book.html" class="nav-cta" data-nav="book">Book Consultation</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="book.html" class="cta-mobile">Book Consultation</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="hero page-hero">
+    <div class="hero-image" style="background-image: url('assets/protection-2.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">Services &middot; Training Programs</span>
+      <h1 class="display">Training built for the real world.</h1>
+      <p class="hero-sub">Whether you have a high-drive working prospect or a family pet that won't stop pulling on the leash, Canem Arca provides the foundation every dog needs.</p>
+    </div>
+  </section>
+
+  <!-- JUMP NAV -->
+  <div class="jump-nav">
+    <div class="jump-nav-inner">
+      <a href="#household">Household</a>
+      <a href="#husbandry">Husbandry</a>
+      <a href="#elite">Protection</a>
+      <a href="#detection">Detection</a>
+      <a href="#programs">Programs</a>
+    </div>
+  </div>
+
+  <!-- HOUSEHOLD HARMONY -->
+  <section class="section" id="household">
+    <div class="container">
+      <div class="svc-header">
+        <span class="eyebrow">For Pet Owners</span>
+        <h2 class="display">Household Harmony.</h2>
+        <p class="lede" style="margin: 0 auto;">Everything you need for a dog that fits into your life. Rooted in how your dog actually thinks, so the training holds up at home, on walks, and everywhere in between.</p>
+      </div>
+
+      <div class="svc-grid">
+
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">01</span>
+          <h3>Reliable Pet Obedience</h3>
+          <p>Walk with a loose leash and get a "sit/stay" that actually works, even with distractions. The foundation every well-mannered dog is built on.</p>
         </div>
-    </nav>
 
-    <div class="mobile-menu">
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">02</span>
+          <h3>Behavior Modification</h3>
+          <p>Fixing complex issues like reactivity, anxiety, and household manners with clear, results-driven methods that address the root cause, not just the symptom.</p>
+        </div>
+
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">03</span>
+          <h3>Puppy Foundations</h3>
+          <p>Start your new best friend off on the right foot with proper socialization, engagement, and early skills that set them up for life.</p>
+        </div>
+
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">04</span>
+          <h3>Breed Education</h3>
+          <p>Understand your dog's natural instincts so you can work with them, not against them. Every breed comes with its own wiring.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COOPERATIVE HUSBANDRY -->
+  <section class="section tinted" id="husbandry">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-image">
+          <img src="assets/husbandry-1.jpg" alt="Cooperative husbandry training" />
+        </div>
+        <div class="feature-content">
+          <span class="eyebrow">Our Signature Difference</span>
+          <h2 class="display">Cooperative Husbandry.</h2>
+          <span class="divider"></span>
+          <p>Because of our medical background, we help train for the "scary" stuff every dog needs to live a healthy life. We specialize in husbandry training rooted in Vet Tech expertise.</p>
+          <p>Your dog goes from dreading the vet to walking in with confidence. A difference you feel every visit.</p>
+          <ul class="feature-list">
+            <li>Stress-free nail trims</li>
+            <li>Calmness during vaccines and vet exams</li>
+            <li>Cooperative grooming and handling</li>
+            <li>Medical handling preparation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELITE PROTECTION -->
+  <section class="section" id="elite">
+    <div class="container">
+      <div class="svc-header">
+        <span class="eyebrow">For Working Dogs</span>
+        <h2 class="display">Elite Protection &amp; Sport.</h2>
+        <p class="lede" style="margin: 0 auto;">Precision, stability, and the technical depth to develop a working prospect into the dog it was meant to be. Whether the goal is personal protection or the trial field.</p>
+      </div>
+
+      <div class="svc-grid">
+
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">01</span>
+          <h3>Personal Protection</h3>
+          <p>Stable, reliable protectors. Development from the ground up or evaluation of your existing dog for PPD work.</p>
+        </div>
+
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">02</span>
+          <h3>Sport Excellence</h3>
+          <p>Professional coaching and a decoy on staff for APPDA, PSA, French Ring, and IGP competition.</p>
+        </div>
+
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">03</span>
+          <h3>Decoy &amp; Trainer Services</h3>
+          <p>Available for clubs and handlers preparing for trial or building working dog foundations.</p>
+        </div>
+
+        <div class="svc-card">
+          <span class="svc-card-eyebrow">04</span>
+          <h3>High-Level Obedience</h3>
+          <p>Competition-ready precision and off-leash reliability for the most demanding environments.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DETECTION -->
+  <section class="section tinted" id="detection">
+    <div class="container">
+      <div class="svc-header">
+        <span class="eyebrow">Specialized Work</span>
+        <h2 class="display">Detection &amp; Specialized Training.</h2>
+        <p class="lede" style="margin: 0 auto;">Structured development for prospects with the right drive and temperament. Every discipline built on proven foundations.</p>
+      </div>
+
+      <div class="det-grid">
+        <div class="det-item"><h4>Apprehension</h4></div>
+        <div class="det-item"><h4>Search &amp; Rescue</h4></div>
+        <div class="det-item"><h4>Narcotics</h4></div>
+        <div class="det-item"><h4>Termite Detection</h4></div>
+        <div class="det-item"><h4>Service Dog Maintenance</h4></div>
+        <div class="det-item"><h4>Agility</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="svc-header">
+        <span class="eyebrow">How You Train With Us</span>
+        <h2 class="display">Training Programs.</h2>
+        <p class="lede" style="margin: 0 auto;">Two primary paths. The one you choose depends on your schedule, your dog's temperament, and how fast you want results.</p>
+      </div>
+
+      <div class="pair-grid">
+
+        <div class="pair-card">
+          <span class="svc-card-eyebrow">Option 01</span>
+          <h3>Private Sessions</h3>
+          <p>Hands-on coaching built around you and your dog. You train alongside us, so you leave every session with the skills to keep the momentum going at home.</p>
+          <div class="ideal">
+            <span class="ideal-label">Ideal for</span>
+            <p class="ideal-text">Foundational work, behavior modification, sport handling, skill polishing.</p>
+          </div>
+        </div>
+
+        <div class="pair-card">
+          <span class="svc-card-eyebrow">Option 02</span>
+          <h3>Board &amp; Train</h3>
+          <p>Immersive development at our facility. Your dog stays with us for a structured program that accelerates results, followed by transfer sessions so you can maintain the work at home.</p>
+          <div class="ideal">
+            <span class="ideal-label">Ideal for</span>
+            <p class="ideal-text">Accelerated results, working prospects, complex behavior cases.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <span class="eyebrow">Additional Services</span>
+        <h3 style="font-size: 1.75rem; margin-bottom: 10px;">Medical Boarding</h3>
+        <p style="color: var(--muted); max-width: 56ch; margin: 0 auto; line-height: 1.7;">Expert care for dogs and cats, including those with medical needs. Our Vet Tech background means your pet is in hands that know how to handle complex cases.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="cta-strip-inner">
+      <span class="eyebrow light">Get Started</span>
+      <h2 class="display">Not sure which program fits your dog?</h2>
+      <p>Start with a free consultation. We'll map out the best path for you and your dog.</p>
+      <a href="book.html" class="btn btn-light">Book Your Free Consultation <span class="arrow">&rarr;</span></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">Canem Arca</div>
+        <p>Specialized training for the family pet and the working dog, based in Leander, Texas. Vet Tech owned and operated.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="book.html">Book Consultation</a></li>
+          <li>Leander, Texas</li>
+          <li>678-263-6895</li>
+          <li>@canem_arca_kennels</li>
         </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#household">Household Harmony</a></li>
+          <li><a href="services.html#elite">Protection &amp; Sport</a></li>
+          <li><a href="services.html#husbandry">Cooperative Husbandry</a></li>
+          <li><a href="services.html#detection">Detection Work</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="book.html">Book</a></li>
+        </ul>
+      </div>
     </div>
 
-    <!-- PAGE HERO -->
-    <section class="hero page-hero">
-        <div class="hero-img">
-            <img src="assets/protection-2.jpg" alt="Canem Arca training programs">
-        </div>
-        <div class="hero-content">
-            <div class="hero-meta">
-                <span>Services</span>
-                <span class="hero-meta-sep"></span>
-                <span>Training Programs</span>
-            </div>
-            <h1>Training built for <em>the real world.</em></h1>
-            <p class="hero-sub">Whether you have a high-drive working prospect or a family pet that won't stop pulling on the leash, Canem Arca provides the foundation every dog needs.</p>
-        </div>
-    </section>
-
-    <!-- JUMP NAV -->
-    <div class="jump-nav">
-        <div class="jump-nav-inner">
-            <a href="#household">Household</a>
-            <a href="#husbandry">Husbandry</a>
-            <a href="#elite">Elite Protection</a>
-            <a href="#detection">Detection</a>
-            <a href="#programs">Programs</a>
-        </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Canem Arca. Built by OTM Web Design.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61588463427591" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+        </a>
+      </div>
     </div>
+  </footer>
 
-    <!-- HOUSEHOLD HARMONY -->
-    <section class="svc-section" id="household">
-        <div class="svc-header">
-            <span class="section-num">01 &mdash; For Pet Owners</span>
-            <h2>Household <em>Harmony.</em></h2>
-        </div>
-
-        <div class="svc-cards">
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 01</span>
-                <h3>Reliable Pet <em>Obedience.</em></h3>
-                <p>Walk with a loose leash and get a "sit/stay" that actually works, even with distractions.</p>
-            </div>
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 02</span>
-                <h3>Behavior <em>Modification.</em></h3>
-                <p>Fixing complex issues like reactivity, anxiety, and household manners with clear, results-driven methods.</p>
-            </div>
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 03</span>
-                <h3>Puppy <em>Foundations.</em></h3>
-                <p>Start your new best friend off on the right foot with proper socialization and engagement.</p>
-            </div>
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 04</span>
-                <h3>Breed <em>Education.</em></h3>
-                <p>Understand your dog's natural instincts so you can work with them, not against them.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- COOPERATIVE HUSBANDRY -->
-    <section class="svc-husbandry" id="husbandry">
-        <div class="svc-husbandry-grid">
-            <div class="svc-husbandry-img">
-                <img src="assets/husbandry-1.jpg" alt="Cooperative husbandry training">
-            </div>
-            <div class="svc-husbandry-text">
-                <span class="section-num">02 &mdash; Our Signature Difference</span>
-                <h2>Cooperative <em>Husbandry.</em></h2>
-                <p>Because of our medical background, we help train for the "scary" stuff every dog needs to live a healthy life. We specialize in husbandry training rooted in our Vet Tech expertise.</p>
-                <ul class="husb-list">
-                    <li>Stress-free nail trims</li>
-                    <li>Calmness during vaccines and vet exams</li>
-                    <li>Cooperative grooming and handling</li>
-                    <li>Medical handling preparation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- ELITE PROTECTION -->
-    <section class="svc-section dark" id="elite">
-        <div class="svc-header">
-            <span class="section-num" style="color: rgba(244,239,229,0.6);">03 &mdash; For Working Dogs</span>
-            <h2>Elite Protection &amp; <em>Sport.</em></h2>
-        </div>
-
-        <div class="svc-cards">
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 01</span>
-                <h3>Personal <em>Protection.</em></h3>
-                <p>Stable, reliable protectors. Development from the ground up or evaluation of your existing dog for PPD work.</p>
-            </div>
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 02</span>
-                <h3>Sport <em>Excellence.</em></h3>
-                <p>Professional coaching and a decoy on staff for APPDA, PSA, French Ring, and IGP.</p>
-            </div>
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 03</span>
-                <h3>Decoy &amp; <em>Trainer Services.</em></h3>
-                <p>Available for clubs and handlers preparing for trial or building working dog foundations.</p>
-            </div>
-
-            <div class="svc-card">
-                <span class="svc-card-num">/ 04</span>
-                <h3>High-Level <em>Obedience.</em></h3>
-                <p>Competition-ready precision and off-leash reliability for the most demanding environments.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SPECIALIZED DETECTION -->
-    <section class="svc-section dark" id="detection" style="padding-top: 0;">
-        <div class="svc-header">
-            <span class="section-num" style="color: rgba(244,239,229,0.6);">04 &mdash; Specialized Work</span>
-            <h2>Detection &amp; <em>Specialized Training.</em></h2>
-        </div>
-
-        <div class="detection-grid">
-
-            <div class="detection-item">
-                <span class="num">/ 01</span>
-                <h4>Apprehension</h4>
-            </div>
-
-            <div class="detection-item">
-                <span class="num">/ 02</span>
-                <h4>Search &amp; Rescue</h4>
-            </div>
-
-            <div class="detection-item">
-                <span class="num">/ 03</span>
-                <h4>Narcotics</h4>
-            </div>
-
-            <div class="detection-item">
-                <span class="num">/ 04</span>
-                <h4>Termite Detection</h4>
-            </div>
-
-            <div class="detection-item">
-                <span class="num">/ 05</span>
-                <h4>Service Dog Maintenance</h4>
-            </div>
-
-            <div class="detection-item">
-                <span class="num">/ 06</span>
-                <h4>Agility</h4>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- TRAINING PROGRAMS -->
-    <section class="svc-section alt" id="programs">
-        <div class="svc-header">
-            <span class="section-num">05 &mdash; How You Train With Us</span>
-            <h2>Training <em>Programs.</em></h2>
-        </div>
-
-        <div class="programs-pair">
-
-            <div class="pair-card">
-                <span class="num">/ 01 &mdash; Private</span>
-                <h3>Private <em>Sessions.</em></h3>
-                <p>Hands-on coaching built around you and your dog. You train alongside us, so you leave every session with the skills to keep the momentum going at home.</p>
-                <div class="ideal">
-                    <strong>Ideal for</strong>
-                    Foundational work, behavior modification, sport handling, skill polishing.
-                </div>
-                <a href="book.html" class="tlink tlink-light">Book a Consultation</a>
-            </div>
-
-            <div class="pair-card rust">
-                <span class="num">/ 02 &mdash; Immersive</span>
-                <h3>Board &amp; <em>Train.</em></h3>
-                <p>Immersive development at our facility. Your dog stays with us for a structured program that accelerates results, followed by transfer sessions so you can maintain the work at home.</p>
-                <div class="ideal">
-                    <strong>Ideal for</strong>
-                    Accelerated results, working prospects, complex behavior cases.
-                </div>
-                <a href="book.html" class="tlink tlink-light">Book a Consultation</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- MEDICAL BOARDING -->
-    <section class="med-boarding">
-        <div class="med-boarding-inner">
-            <span class="section-num">06 &mdash; Additional Services</span>
-            <h3>Medical <em>Boarding.</em></h3>
-            <p>Expert care for dogs and cats, including those with medical needs. Our Vet Tech background means your pet is in hands that know how to handle complex cases.</p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="cta-inner">
-            <h2>Not sure which program fits <em>your dog?</em></h2>
-            <p>Start with a free consultation. We'll map out the best path for you and your dog.</p>
-            <a href="book.html" class="btn btn-ghost">Book Your Free Consultation <span class="arrow"></span></a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-wordmark">
-            <span class="mark">Canem <em>Arca</em></span>
-            <span class="tag">We don't just train dogs. We train relationships.</span>
-        </div>
-
-        <div class="footer-grid">
-
-            <div class="footer-col">
-                <h5>About</h5>
-                <p>Specialized training for the family pet and the working dog, based in Leander, Texas. Vet Tech owned and operated.</p>
-            </div>
-
-            <div class="footer-col">
-                <h5>Contact</h5>
-                <ul>
-                    <li>Leander, Texas</li>
-                    <li>678-263-6895</li>
-                    <li>@canem_arca_kennels</li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Services</h5>
-                <ul>
-                    <li><a href="services.html#household">Household Harmony</a></li>
-                    <li><a href="services.html#elite">Protection &amp; Sport</a></li>
-                    <li><a href="services.html#husbandry">Cooperative Husbandry</a></li>
-                    <li><a href="services.html#detection">Specialized Detection</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h5>Navigate</h5>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="book.html">Book</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Canem Arca &mdash; Built by OTM Web Design</p>
-            <div class="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=61588463427591" target="_blank" rel="noopener" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
