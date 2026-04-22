@@ -1,144 +1,217 @@
 /* ============================================
-   CANEM ARCA - SCRIPT
+   CANEM ARCA | SCRIPT
    Built by OTM Web Design
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    /* ============================================
-       HAMBURGER MENU
-       ============================================ */
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+  /* ---------- Active nav state ---------- */
+  const currentPage = document.body.getAttribute('data-page');
+  document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.getAttribute('data-nav') === currentPage) {
+      link.classList.add('is-active');
+    }
+  });
 
-    if (hamburger && mobileMenu) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        });
+  /* ---------- Nav scroll shadow ---------- */
+  const nav = document.getElementById('mainNav');
+  if (nav) {
+    const onScroll = () => {
+      if (window.pageYOffset > 20) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
-        // Close menu when a link is clicked
-        mobileMenuLinks.forEach(function(link) {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
+  /* ---------- Hamburger ---------- */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-        // Close menu on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const isActive = mobileMenu.classList.toggle('active');
+      hamburger.classList.toggle('active', isActive);
+      document.body.style.overflow = isActive ? 'hidden' : '';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  /* ---------- Programs carousel ---------- */
+  const track = document.getElementById('programsTrack');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const dotsContainer = document.getElementById('carouselDots');
+
+  if (track && prevBtn && nextBtn && dotsContainer) {
+    const cards = track.querySelectorAll('.program-card');
+    let current = 0;
+    let visible = 3;
+    let autoTimer;
+
+    function getVisible() {
+      const width = window.innerWidth;
+      if (width <= 900) return 1;
+      if (width <= 1100) return 2;
+      return 3;
     }
 
-    /* ============================================
-       NAV SCROLL EFFECT
-       ============================================ */
-    const nav = document.querySelector('.nav');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-
-        if (nav) {
-            if (currentScroll > 50) {
-                nav.style.boxShadow = '0 2px 12px rgba(0, 0, 0, 0.06)';
-            } else {
-                nav.style.boxShadow = 'none';
-            }
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    /* ============================================
-       ACTIVE NAV LINK HIGHLIGHTING
-       ============================================ */
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-link, .mobile-menu a');
-
-    navLinks.forEach(function(link) {
-        const linkPath = link.getAttribute('href');
-        if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
-            link.classList.add('active');
-        }
-    });
-
-    /* ============================================
-       FORM VALIDATION & UX
-       ============================================ */
-    const bookForm = document.querySelector('#consultation-form');
-
-    if (bookForm) {
-        bookForm.addEventListener('submit', function(e) {
-            const requiredFields = bookForm.querySelectorAll('[required]');
-            let isValid = true;
-
-            requiredFields.forEach(function(field) {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.style.borderColor = '#a84a28';
-                } else {
-                    field.style.borderColor = '';
-                }
-            });
-
-            if (!isValid) {
-                e.preventDefault();
-                const firstEmpty = bookForm.querySelector('[required]:invalid, [required][value=""]');
-                if (firstEmpty) {
-                    firstEmpty.focus();
-                    firstEmpty.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            } else {
-                // Disable submit button to prevent double-submission
-                const submitBtn = bookForm.querySelector('.form-submit');
-                if (submitBtn) {
-                    submitBtn.textContent = 'Sending...';
-                    submitBtn.disabled = true;
-                }
-            }
-        });
-
-        // Clear error styling on input
-        const formInputs = bookForm.querySelectorAll('input, select, textarea');
-        formInputs.forEach(function(input) {
-            input.addEventListener('input', function() {
-                if (input.value.trim()) {
-                    input.style.borderColor = '';
-                }
-            });
-        });
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      const total = cards.length;
+      const maxIndex = Math.max(0, total - visible);
+      for (let i = 0; i <= maxIndex; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      }
     }
 
-    /* ============================================
-       SMOOTH SCROLL FOR ANCHOR LINKS
-       ============================================ */
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    function goTo(index) {
+      const total = cards.length;
+      const maxIndex = Math.max(0, total - visible);
+      current = Math.max(0, Math.min(index, maxIndex));
+      const cardStyle = getComputedStyle(cards[0]);
+      const gap = parseFloat(getComputedStyle(track).gap) || 24;
+      const cardWidth = cards[0].offsetWidth + gap;
+      track.style.transform = `translateX(-${current * cardWidth}px)`;
+      dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
 
-    anchorLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            const href = link.getAttribute('href');
-            if (href === '#') return;
+    function next() {
+      const maxIndex = Math.max(0, cards.length - visible);
+      goTo(current >= maxIndex ? 0 : current + 1);
+    }
 
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                const offset = 90;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
+    function prev() {
+      const maxIndex = Math.max(0, cards.length - visible);
+      goTo(current <= 0 ? maxIndex : current - 1);
+    }
+
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(next, 5000);
+    }
+
+    function stopAuto() {
+      if (autoTimer) clearInterval(autoTimer);
+    }
+
+    prevBtn.addEventListener('click', () => { prev(); startAuto(); });
+    nextBtn.addEventListener('click', () => { next(); startAuto(); });
+
+    track.addEventListener('mouseenter', stopAuto);
+    track.addEventListener('mouseleave', startAuto);
+
+    // Touch support
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+      stopAuto();
+    }, { passive: true });
+
+    track.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) dx < 0 ? next() : prev();
+      startAuto();
     });
+
+    // Resize handling
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const newVisible = getVisible();
+        if (newVisible !== visible) {
+          visible = newVisible;
+          current = 0;
+          buildDots();
+          goTo(0);
+        } else {
+          goTo(current);
+        }
+      }, 150);
+    });
+
+    // Init
+    visible = getVisible();
+    buildDots();
+    startAuto();
+  }
+
+  /* ---------- Form validation & UX ---------- */
+  const bookForm = document.getElementById('consultation-form');
+  if (bookForm) {
+    bookForm.addEventListener('submit', function (e) {
+      const required = bookForm.querySelectorAll('[required]');
+      let valid = true;
+
+      required.forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = '#8b3a1f';
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+
+      if (!valid) {
+        e.preventDefault();
+        const first = bookForm.querySelector('[required]:invalid');
+        if (first) {
+          first.focus();
+          first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } else {
+        const submitBtn = bookForm.querySelector('.form-submit');
+        if (submitBtn) {
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+        }
+      }
+    });
+
+    bookForm.querySelectorAll('input, select, textarea').forEach(input => {
+      input.addEventListener('input', () => {
+        if (input.value.trim()) input.style.borderColor = '';
+      });
+    });
+  }
+
+  /* ---------- Smooth scroll for anchor links ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = link.getAttribute('href');
+      if (href === '#' || href.length < 2) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        const navHeight = 82;
+        const jumpNavHeight = document.querySelector('.jump-nav') ? 60 : 0;
+        const offset = navHeight + jumpNavHeight + 12;
+        const pos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: pos, behavior: 'smooth' });
+      }
+    });
+  });
 
 });
